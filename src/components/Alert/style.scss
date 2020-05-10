@@ -1,0 +1,35 @@
+.zyl-alert{
+  position: relative;
+  padding: $alert-padding;
+  display: inline-block;
+  color: $white;
+  max-width: $alert-max-width;
+  min-width: $alert-min-width;
+  // top:$alert-top;
+  // left: 50%;
+  // transform: translateX(-50%);
+  border-radius: $alert-border-radius;
+  .zyl-alert-closebtn{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+  }
+  .zyl-alert-title{
+    font-size: $alert-title-font-size;
+  }
+  .zyl-alert-content{
+    font-size: $alert-content-font-size;
+  }
+}
+.zyl-alert-success{
+  background: $success;
+}
+.zyl-alert-warning{
+  background: $warning;
+}
+.zyl-alert-danger{
+  background: $danger;
+}
+.zyl-alert-default{
+  background: $secondary;
+}

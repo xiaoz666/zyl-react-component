@@ -1,0 +1,63 @@
+.zyl-btn {
+  position: relative;
+  display: inline-block;
+  font-weight: $btn-font-weight;
+  line-height: $btn-line-height;
+  color: $body-color;
+  white-space: nowrap;
+  text-align: center;
+  vertical-align: middle;
+  background-image: none;
+  border: $btn-border-width solid lighten($body-color,30%);
+  box-shadow: $btn-box-shadow;
+  cursor: pointer;
+  transition: $btn-transition;
+
+  &.disabled,
+  &[disabled] {
+    cursor: not-allowed;
+    // opacity: $btn-disabled-opacity;
+    background: $btn-disabled-background;
+    color: $btn-disabled-color;
+    border-color:$btn-disabled-color ;
+    box-shadow: none;
+    
+    >* {
+      pointer-events: none;
+    }
+  }
+}
+.zyl-btn-lg{
+  @include button-size($btn-padding-y-lg,
+    $btn-padding-x-lg,
+    $btn-font-size-lg,
+    $border-radius-lg);
+}
+.zyl-btn-md{
+  @include button-size($btn-padding-y,
+    $btn-padding-x,
+    $btn-font-size,
+    $border-radius);
+}
+.zyl-btn-sm{
+  @include button-size($btn-padding-y-sm,
+    $btn-padding-x-sm,
+    $btn-font-size-sm,
+    $border-radius-sm);
+}
+.zyl-btn-primary {
+  @include button-type($primary,$primary,$white);
+}
+.zyl-btn-info {
+  @include button-type($info,$info,$white);
+}
+.zyl-btn-danger {
+  @include button-type($danger,$danger,$white);
+}
+.zyl-btn-link {
+  font-weight: $font-weight-normal;
+  color:$btn-link-color;
+  text-decoration: $link-decoration;
+  box-shadow: none;
+  border: none;
+}
