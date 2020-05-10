@@ -11,7 +11,7 @@ interface IZylAlrtProps {
 }
 type AlertProps = Partial<IZylAlrtProps&React.DOMAttributes<HTMLElement>>
 const Alert: FC<AlertProps> = (props) => {
-  const [showAlert,setShowAlert]= useState(true)
+  // const [showAlert,setShowAlert]= useState(true)
   const { className, type, title, showClose, content,onClose } = props
   const classes = classNames('zyl-alert', className, {
     [`zyl-alert-${type}`]: type
